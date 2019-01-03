@@ -1,0 +1,27 @@
+
+rpm -Uvh --nodeps openssl-libs-1.0.2k-8.el7.x86_64.rpm
+rpm -Uvh openssl-devel-1.0.2k-8.el7.x86_64.rpm
+rpm -Uvh openssl-1.0.2k-8.el7.x86_64.rpm
+
+rpm -ivh GeoIP-1.5.0-11.el7.x86_64.rpm
+rpm -ivh fontpackages-filesystem-1.44-8.el7.noarch.rpm
+rpm -ivh lyx-fonts-2.2.3-1.el7.noarch.rpm
+rpm -ivh fontconfig-2.10.95-11.el7.x86_64.rpm
+rpm -ivh gd-2.0.35-26.el7.x86_64.rpm
+rpm -ivh libunwind-1.2-2.el7.x86_64.rpm
+rpm -ivh gperftools-libs-2.4-8.el7.x86_64.rpm
+
+rpm -ivh nginx-filesystem-1.12.2-1.el7.noarch.rpm 
+rpm -ivh --nodeps --force nginx-1.12.2-1.el7.x86_64.rpm            
+rpm -ivh nginx-mod-http-geoip-1.12.2-1.el7.x86_64.rpm
+rpm -ivh nginx-mod-http-image-filter-1.12.2-1.el7.x86_64.rpm
+rpm -ivh nginx-mod-http-perl-1.12.2-1.el7.x86_64.rpm
+rpm -ivh nginx-mod-http-xslt-filter-1.12.2-1.el7.x86_64.rpm
+rpm -ivh nginx-mod-mail-1.12.2-1.el7.x86_64.rpm    
+rpm -ivh nginx-all-modules-1.12.2-1.el7.noarch.rpm 
+rpm -ivh nginx-mod-stream-1.12.2-1.el7.x86_64.rpm  
+
+/usr/bin/systemctl stop httpd
+/usr/bin/systemctl disable httpd
+/usr/bin/systemctl start nginx
+/usr/bin/systemctl enable nginx
