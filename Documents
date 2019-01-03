@@ -1,0 +1,22 @@
+1.Apache Prefork vs Worker MPM
+https://stackoverflow.com/questions/13883646/apache-prefork-vs-worker-mpm
+
+2.Tune apache2 for more concurrent connections
+https://oxpedia.org/wiki/index.php?title=Tune_apache2_for_more_concurrent_connections
+
+3.Configure HTTPD To Listen on Multiple Ports
+https://www.cyberciti.biz/faq/fedora-rhel-centos-configure-httpd-listen-multipleports/
+
+
+4.mysql-host-host-name-is-blocked-which-database 
+mysqladmin -uroot -p flush-hosts
+ 
+ https://dba.stackexchange.com/questions/76151/mysql-host-host-name-is-blocked-which-database
+ 
+ SET GLOBAL max_connect_errors = 100000000;
+ 
+ pm2 start listener.js --max-memory-restart 100M
+ 
+ 5.Swap memeory and creation on reboot
+  http://nixnama.com/linux/creating-swap-partition-in-linux-os/
+ 
